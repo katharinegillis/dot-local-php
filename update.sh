@@ -5,12 +5,12 @@ sudo apt install build-essential autoconf libtool bison re2c pkg-config libxml2-
 
 # Get the binaries package
 cd /tmp || exit
-wget https://www.php.net/distributions/php-8.1.10.tar.xz
+wget https://www.php.net/distributions/php-8.2.1.tar.xz
 
 # Extract the source code
 mkdir php-src
-sudo tar -xJvf php-8.1.10.tar.xz -C php-src
-cd php-src/php-8.1.10 || exit
+sudo tar -xJvf php-8.2.1.tar.xz -C php-src
+cd php-src/php-8.2.1 || exit
 sudo chown -R "$(id -u):$(id -g)" .
 
 # Configure Php
@@ -29,4 +29,4 @@ sudo make -j "$(nproc)" install
 
 # Delete the source
 sudo rm -rf /tmp/php-src
-sudo rm -rf /tmp/php-8.1.10.tar.xz
+sudo rm -rf /tmp/php-8.2.1.tar.xz
